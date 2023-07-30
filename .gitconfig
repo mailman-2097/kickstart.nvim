@@ -1,0 +1,12 @@
+[user]
+	email = 13964689+mailman-2097@users.noreply.github.com
+	name = Nishad Saithaly
+	signingkey = F8851BA603AE9815
+[core]
+	autocrlf = input
+	eol = lf
+	editor = vim
+	filemode = true
+[init]
+	defaultBranch = master
+
