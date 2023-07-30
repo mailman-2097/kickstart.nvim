@@ -1,49 +1,37 @@
-# kickstart.nvim
-
-https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
+# My neovim configuration
 
 ### Introduction
 
-A starting point for Neovim that is:
-
-* Small
-* Single-file (with examples of moving to multi-file)
-* Documented
-* Modular
-
-This repo is meant to be used by **YOU** to begin your Neovim journey; remove the things you don't use and add what you miss.
-
-Kickstart.nvim targets *only* the latest ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim. If you are experiencing issues, please make sure you have the latest versions.
+A starting point for my personal neovim configuration. This is based on the [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 
 Distribution Alternatives:
 - [LazyVim](https://www.lazyvim.org/): A delightful distribution maintained by @folke (the author of lazy.nvim, the package manager used here)
 
 ### Installation
 
-* Backup your previous configuration (if any exists)
+Install Nvim from source. I am on Ubuntu WSL, you can also install neovim from the snap package.
 
-### Archive Installation
-* On the home/landing page for the project find the blue "<> CODE" button click it and select Local > Download ZIP.
-* Extract the archive to:
-  `~/.config/nvim` (Linux)
-  `~/.config/nvim` (MacOS)
-  `%userprofile%\AppData\Local\nvim\` (Windows)
-* Ensure your extraction method did not extract with a parent folder. For example in ~/.config/nvim you should have init.lua not another folder called kickstart.nvim.
+```
+rm -rf  .local/share/nvim/lazy
+mv ~/.config/nvim ~/.config/nvim_0
 
-### Git Clone Installation
-* From a terminal cd/dir to:
-    `~/.config/nvim` (Linux)
-    `~/.config/nvim` (MacOS)
-    `%userprofile%\AppData\Local\nvim\` (Windows)
+sudo apt-get install ninja-build gettext cmake unzip curl
 
-* run: `git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim` OR: `gh repo clone nvim-lua/kickstart.nvim`
+<!-- https://github.com/sadikeey/nvim -->
+
+git clone https://github.com/neovim/neovim.git
+cd neovim
+git branch -a
+git checkout release-0.9
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+
+```
+
+* run: `git clone https://github.com/mailman-2097/kickstart.nvim.git ~/.config/nvim`
 * Run Neovim (from terminal or shortcut) and allow lazy.nvim to download files and set up the basics.
 * Once the setup is complete, restart Neovim.
 * **You're ready to go!**
-
-* (Recommended/Optional) Fork this repo (so that you have your own copy that you can modify).
-* Clone the kickstart repo into `$HOME/.config/nvim/` (Linux/Mac) or `%userprofile%\AppData\Local\nvim\` (Windows)
-  * If you don't want to include it as a git repo, you can just clone it and then move the files to this location
 
 Additional system requirements:
 - Make sure to review the readmes of the plugins if you are experiencing errors. In particular:
@@ -114,7 +102,7 @@ This will install the tree plugin and add the command `:Neotree` for you. You ca
 
 ### Contribution
 
-Pull-requests are welcome. The goal of this repo is not to create a Neovim configuration framework, but to offer a starting template that shows, by example, available features in Neovim. Some things that will not be included:
+Pull-requests are not welcome. You are better off, forking the upstream or using a custom nvim distribution.
 
 * Custom language server configuration (null-ls templates)
 * Theming beyond a default colorscheme necessary for LSP highlight groups
