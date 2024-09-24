@@ -182,6 +182,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- <C-s> to save
+-- mapping is non-recursive and silent
 vim.keymap.set('n', '<C-s>', ':update<CR>', { noremap = true, silent = true })
 
 -- Keybinds to make split navigation easier.
