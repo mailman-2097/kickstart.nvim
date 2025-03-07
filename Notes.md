@@ -14,7 +14,6 @@ Kickstart Guide:
 -- vim.g.have_nerd_font = true
 
 -- For custom plugins
--- You can setup 
 --]]
 
 # Good way to manage changes
