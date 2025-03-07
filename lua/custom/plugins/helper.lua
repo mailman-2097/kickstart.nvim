@@ -16,6 +16,11 @@ local function inspect_all_opts()
     end
 end
 -- inspect_all_opts()
+-- vim.g.inspect_all_opts = inspect_all_opts
+-- Create a custom command to call the global function :()
+vim.api.nvim_create_user_command('InspectAllOpts', function()
+    vim.g.inspect_all_opts()
+end, {})
 --
 
 -- Map <C-d> to dictionary-based completion in insert mode
