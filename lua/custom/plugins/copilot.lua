@@ -1,4 +1,7 @@
 -- Github Copilot
 -- :help Copilot
 -- :Copilot setup
-return { 'github/copilot.vim' }
+vim.g.copilot_enabled = false
+return {
+  'github/copilot.vim',
+}
