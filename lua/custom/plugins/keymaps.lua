@@ -17,12 +17,15 @@ set_save_keymap 'n' -- Normal mode
 set_save_keymap 'i' -- Insert mode
 set_save_keymap 'v' -- Visual mode
 
+
+-- Not sure exactly how how below should function commenting out for now
+
 -- Reload current lua configuration
-vim.keymap.set('n', '<space><space>x', '<cmd>source %<CR>', {})
+-- vim.keymap.set('n', '<space><space>x', '<cmd>source %<CR>', {})
 
 -- Execute current configuration item in normal and visual mode
 -- {} at end is optional
-vim.keymap.set('n', '<space>x', '.lua<CR>', {})
-vim.keymap.set('v', '<space>x', ':lua<CR>', {})
+-- vim.keymap.set('n', '<space>x', '.lua<CR>', {})
+-- vim.keymap.set('v', '<space>x', ':lua<CR>', {})
 
 return {}
