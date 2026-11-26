@@ -25,7 +25,12 @@ set_save_keymap 'v' -- Visual mode
 
 -- Execute current configuration item in normal and visual mode
 -- {} at end is optional
+-- print("hello")
+-- There is a bug here not working in Normal Mode
 -- vim.keymap.set('n', '<space>x', '.lua<CR>', {})
--- vim.keymap.set('v', '<space>x', ':lua<CR>', {})
+
+-- <shift>V to select the line and execute the lua code
+-- print("hello")
+vim.keymap.set('v', '<space>x', ':lua<CR>', {})
 
 return {}
